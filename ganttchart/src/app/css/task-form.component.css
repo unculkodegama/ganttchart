@@ -1,0 +1,15 @@
+hr.style1 {
+    border-top: 3px solid #5e5d5d;
+    margin-top: 9px !important;
+    margin-bottom: 9px !important;
+}
+
+#addTask {
+    margin-top: 15px;
+    margin-right: 32px;
+    margin-left: 32px;
+}
+
+#inputName {
+    width: 250px;
+}

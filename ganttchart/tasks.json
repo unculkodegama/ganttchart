@@ -1,0 +1,49 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "parentId": "1",
+      "nameOfTask": "uloha 1 - upravena1"
+    },
+    {
+      "id": "3",
+      "parentId": "2",
+      "nameOfTask": "uloha 3 - upravena"
+    },
+    {
+      "id": "4",
+      "parentId": "3",
+      "nameOfTask": "uloha 4"
+    },
+    {
+      "id": "9",
+      "parentId": "9",
+      "nameOfTask": "uloha 9"
+    },
+    {
+      "id": "329e339a-ac2b-c570-615a-a44efdbc2937",
+      "parentId": "329e339a-ac2b-c570-615a-a44efdbc2937",
+      "nameOfTask": "uloha 10"
+    },
+    {
+      "id": "ca70af3e-ece2-ad16-51b8-c8f8237eeace",
+      "parentId": "ca70af3e-ece2-ad16-51b8-c8f8237eeace",
+      "nameOfTask": "uloha 5"
+    },
+    {
+      "id": "137a943f-fa6f-bb74-d0c5-2f6ece1692f3",
+      "parentId": "ca70af3e-ece2-ad16-51b8-c8f8237eeace",
+      "nameOfTask": "uloha 5 - dieta"
+    },
+    {
+      "id": "d4ba4c24-de8a-d030-8556-e840484766f5",
+      "parentId": "d4ba4c24-de8a-d030-8556-e840484766f5",
+      "nameOfTask": "uloha 12 - a"
+    },
+    {
+      "id": "923eb0e0-b281-c924-3e17-978d406a334f",
+      "parentId": "d4ba4c24-de8a-d030-8556-e840484766f5",
+      "nameOfTask": "uloha 12 - B"
+    }
+  ]
+}
