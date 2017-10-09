@@ -8,6 +8,7 @@ import {TaskListComponent} from "./task-list.component";
 import {TaskIndexComponent} from "./task.index";
 import {TaskService} from "../services/task.service";
 import {TooltipModule} from "ngx-tooltip";
+import { MyDateRangePickerModule } from 'mydaterangepicker';
 
 @NgModule({
     imports: [
@@ -15,14 +16,15 @@ import {TooltipModule} from "ngx-tooltip";
         FormsModule,
         HttpModule,
         JsonpModule,
-        TooltipModule
+        TooltipModule,
+        MyDateRangePickerModule
     ],
 
     declarations: [
         TaskBoxComponent,
         TaskFormComponent,
         TaskListComponent,
-        TaskIndexComponent
+        TaskIndexComponent,
     ],
 
     providers: [
@@ -35,7 +37,7 @@ import {TooltipModule} from "ngx-tooltip";
         TaskBoxComponent,
         TaskFormComponent,
         TaskListComponent,
-        TaskIndexComponent
+        TaskIndexComponent,
     ]
 })
 

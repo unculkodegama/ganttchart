@@ -1,35 +1,38 @@
 <div id="taskBoxDiv">
-    <div id="innerTaskBoxDiv">
-        <div id="text">
-            <br>
-            <p [tooltip]="info" [tooltipDisabled]="false" [tooltipAnimation]="true" tooltipPlacement="top"
-               id="taskText">{{task.nameOfTask}}</p>
-        </div>
-        <div id="functions">
-
-            <a tooltip="Editovať" [tooltipDisabled]="false" [tooltipAnimation]="true" tooltipPlacement="top"
-               (click)="editTask()" data-toggle="modal" data-target="#myModal">
-                <span class="glyphicon glyphicon-edit"></span>
-            </a>
-
-            <br>
-            <a tooltip="Vymazať" [tooltipDisabled]="false" [tooltipAnimation]="true" tooltipPlacement="top"
-               (click)="deleteTask(task.id)">
-                <span class="glyphicon glyphicon-remove"></span>
-            </a>
-
-            <br>
-            <a tooltip="Vytvoriť podúlohu" [tooltipDisabled]="false" [tooltipAnimation]="true" tooltipPlacement="top"
-                (click)="createChild()" data-toggle="modal" data-target="#myModal">
-                <span class="glyphicon glyphicon-plus"></span>
-            </a>
-            <br>
-        </div>
+  <div id="innerTaskBoxDiv">
+    <div id="text">
+      <br>
+      <p [tooltip]="info" [tooltipDisabled]="false" [tooltipAnimation]="true" tooltipPlacement="top"
+         id="taskText">{{task.nameOfTask}}</p>
     </div>
+    <div id="functions">
+
+      <a tooltip="Editovať" [tooltipDisabled]="false" [tooltipAnimation]="true" tooltipPlacement="top"
+         (click)="editTask()" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-edit"></span>
+      </a>
+
+      <br>
+      <a tooltip="Vymazať" [tooltipDisabled]="false" [tooltipAnimation]="true" tooltipPlacement="top"
+         (click)="deleteTask(task.id)">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+
+      <br>
+      <a tooltip="Vytvoriť podúlohu" [tooltipDisabled]="false" [tooltipAnimation]="true" tooltipPlacement="top"
+         (click)="createChild()" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus"></span>
+      </a>
+      <br>
+    </div>
+  </div>
 </div>
 
 <tooltip-content #info>
-    <p>meno ulohy: {{task.nameOfTask}}</p>
-    <p>id: {{task.id}}</p>
-    <p>parent id: {{task.parentId}}</p>
+  <p>meno ulohy: {{task.nameOfTask}}</p>
+  <p>id: {{task.id}}</p>
+  <p>parent id: {{task.parentId}}</p>
+  <p>dateOfCreation: {{task.dateOfCreation}}</p>
+  <p>startDate: {{task.startDate}}</p>
+  <p>endDate: {{task.endDate}}</p>
 </tooltip-content>

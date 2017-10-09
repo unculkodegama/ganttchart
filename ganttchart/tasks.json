@@ -1,31 +1,6 @@
 {
   "tasks": [
     {
-      "id": "1",
-      "parentId": "1",
-      "nameOfTask": "uloha 1 - upravena1"
-    },
-    {
-      "id": "3",
-      "parentId": "2",
-      "nameOfTask": "uloha 3 - upravena"
-    },
-    {
-      "id": "4",
-      "parentId": "3",
-      "nameOfTask": "uloha 4"
-    },
-    {
-      "id": "9",
-      "parentId": "9",
-      "nameOfTask": "uloha 9"
-    },
-    {
-      "id": "329e339a-ac2b-c570-615a-a44efdbc2937",
-      "parentId": "329e339a-ac2b-c570-615a-a44efdbc2937",
-      "nameOfTask": "uloha 10"
-    },
-    {
       "id": "ca70af3e-ece2-ad16-51b8-c8f8237eeace",
       "parentId": "ca70af3e-ece2-ad16-51b8-c8f8237eeace",
       "nameOfTask": "uloha 5"
@@ -44,6 +19,22 @@
       "id": "923eb0e0-b281-c924-3e17-978d406a334f",
       "parentId": "d4ba4c24-de8a-d030-8556-e840484766f5",
       "nameOfTask": "uloha 12 - B"
+    },
+    {
+      "id": "783c3357-dc2f-b290-97b6-e1494fbdd86d",
+      "parentId": "783c3357-dc2f-b290-97b6-e1494fbdd86d",
+      "nameOfTask": "gg",
+      "dateOfCreation": "Mon Oct 09 2017",
+      "startDate": "Mon Oct 09 2017",
+      "endDate": "Mon Oct 09 2017"
+    },
+    {
+      "id": "bebb8d2e-3caa-ac07-f4f8-f4d666530c0b",
+      "parentId": "bebb8d2e-3caa-ac07-f4f8-f4d666530c0b",
+      "nameOfTask": "eaq",
+      "dateOfCreation": "Mon Oct 09 2017",
+      "startDate": "Tue Oct 03 2017 00:00:00 GMT+0200",
+      "endDate": "Thu Oct 12 2017 00:00:00 GMT+0200"
     }
   ]
 }
