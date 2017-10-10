@@ -8,7 +8,7 @@
     <div id="functions">
 
       <a tooltip="Editovať" [tooltipDisabled]="false" [tooltipAnimation]="true" tooltipPlacement="top"
-         (click)="editTask()" data-toggle="modal" data-target="#myModal">
+         (click)="editTask()" data-toggle="modal" data-target="#modalEditTask">
         <span class="glyphicon glyphicon-edit"></span>
       </a>
 
@@ -20,7 +20,7 @@
 
       <br>
       <a tooltip="Vytvoriť podúlohu" [tooltipDisabled]="false" [tooltipAnimation]="true" tooltipPlacement="top"
-         (click)="createChild()" data-toggle="modal" data-target="#myModal">
+         (click)="createChild()" data-toggle="modal" data-target="#modalAddChildTask">
         <span class="glyphicon glyphicon-plus"></span>
       </a>
       <br>

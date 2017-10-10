@@ -8,37 +8,37 @@ import {TaskListComponent} from "./task-list.component";
 import {TaskIndexComponent} from "./task.index";
 import {TaskService} from "../services/task.service";
 import {TooltipModule} from "ngx-tooltip";
-import { MyDateRangePickerModule } from 'mydaterangepicker';
+import {MyDateRangePickerModule} from 'mydaterangepicker';
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        FormsModule,
-        HttpModule,
-        JsonpModule,
-        TooltipModule,
-        MyDateRangePickerModule
-    ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    JsonpModule,
+    TooltipModule,
+    MyDateRangePickerModule
+  ],
 
-    declarations: [
-        TaskBoxComponent,
-        TaskFormComponent,
-        TaskListComponent,
-        TaskIndexComponent,
-    ],
+  declarations: [
+    TaskBoxComponent,
+    TaskFormComponent,
+    TaskListComponent,
+    TaskIndexComponent,
+  ],
 
-    providers: [
-        TaskService
-    ],
+  providers: [
+    TaskService
+  ],
 
-    bootstrap: [TaskBoxComponent, TaskFormComponent, TaskListComponent, TaskIndexComponent],
+  bootstrap: [TaskBoxComponent, TaskFormComponent, TaskListComponent, TaskIndexComponent],
 
-    exports: [
-        TaskBoxComponent,
-        TaskFormComponent,
-        TaskListComponent,
-        TaskIndexComponent,
-    ]
+  exports: [
+    TaskBoxComponent,
+    TaskFormComponent,
+    TaskListComponent,
+    TaskIndexComponent,
+  ]
 })
 
 export class TaskComponentModule {

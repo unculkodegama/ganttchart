@@ -1,33 +1,19 @@
-<!--<form (ngSubmit)="submitTask()">-->
-<!--<div class="form-group">-->
-<!--<div class="input-group">-->
-
-<!--<input type="text" class="form-control" placeholder="nameOfTask" [(ngModel)]="model.nameOfTask"-->
-<!--name="nameOfTask">-->
-<!--</div>-->
-<!--<button *ngIf="!editing && !createChild" type="submit" class="btn btn-primary btn-block">Add</button>-->
-<!--<button *ngIf="editing" type="submit" class="btn btn-warning btn-block">Update</button>-->
-<!--<button *ngIf="createChild" type="submit" class="btn btn-info btn-block">Add Child</button>-->
-<!--</div>-->
-<!--</form>-->
-
-<!-- Trigger the modal with a button -->
-
-<button id="addTask" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Pridať úlohu
+<button id="addTask" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalAddTask">Pridať
+  úlohu
 </button>
 
 <hr class="style1">
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
+<!--modal for creating task-->
+<div id="modalAddTask" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" (click)="resetAll()">&times;</button>
-        <!--TODO - Vymyslieť dynamické meno modalu inak ako cez if-->
-        <h4 class="modal-title"> Modal </h4>
+
+        <h4 class="modal-title"> Vytvoriť úlohu </h4>
       </div>
       <div class="modal-body">
         <form (ngSubmit)="submitTask()">
@@ -36,23 +22,102 @@
 
               <my-date-range-picker name="mydaterange" [options]="dateRangePickerOptions"
                                     (dateRangeChanged)="onDateRangeChanged($event)"
-                                    ></my-date-range-picker>
+              ></my-date-range-picker>
               <br>
 
-              <!--TODO - doriešiť aby pri updatovaní úlohy a vytvárani dieťata to nebolo dynamicky prepojené s úlohou, je to rozptylujúce a divné-->
-              <input id="inputName" type="text" class="form-control" placeholder="Meno úlohy"
+
+              <input id="inputName" type="text" class="form-control" placeholder="Meno úlohy" required
                      [(ngModel)]="model.nameOfTask"
                      name="nameOfTask">
             </div>
             <button *ngIf="!editing && !createChild" type="button" (click)="submitTask()" data-dismiss="modal"
                     class="btn btn-primary btn-block">Pridať
             </button>
-            <button *ngIf="editing" type="button" (click)="submitTask()" data-dismiss="modal"
-                    class="btn btn-warning btn-block">Aktualizovať
-            </button>
+
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="resetAll()">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--modal for creating child task-->
+<div id="modalAddChildTask" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" (click)="resetAll()">&times;</button>
+
+        <h4 class="modal-title"> Vytvoriť podúlohu </h4>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="submitTask()">
+          <div class="form-group">
+            <div class="input-group">
+
+              <my-date-range-picker name="mydaterange" [options]="dateRangePickerOptions"
+                                    (dateRangeChanged)="onDateRangeChanged($event)"
+              ></my-date-range-picker>
+              <br>
+
+              <!--TODO - doriešiť aby pri updatovaní úlohy a vytvárani dieťata to nebolo dynamicky prepojené s úlohou, je to rozptylujúce a divné-->
+              <input id="inputName" type="text" class="form-control" placeholder="Meno úlohy" required
+                     [(ngModel)]="model.nameOfTask"
+                     name="nameOfTask">
+            </div>
+
             <button *ngIf="createChild" type="button" (click)="submitTask()" data-dismiss="modal"
                     class="btn btn-info btn-block">Pridať potomka
             </button>
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="resetAll()">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--modal for updating task-->
+<div id="modalEditTask" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" (click)="resetAll()">&times;</button>
+
+        <h4 class="modal-title"> Editovať </h4>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="submitTask()">
+          <div class="form-group">
+            <div class="input-group">
+
+              <my-date-range-picker name="mydaterange" [options]="dateRangePickerOptions" [(ngModel)]="dateRangeModel"
+                                    (dateRangeChanged)="onDateRangeChanged($event)"
+              ></my-date-range-picker>
+              <br>
+
+              <!--TODO - doriešiť aby pri updatovaní úlohy a vytvárani dieťata to nebolo dynamicky prepojené s úlohou, je to rozptylujúce a divné-->
+              <input id="inputName" type="text" class="form-control" placeholder="Meno úlohy"
+                     [ngModel]="model.nameOfTask" (ngModelChange)="model.nameOfTask = $event"
+                     name="nameOfTask">
+            </div>
+            <button *ngIf="editing" type="button" (click)="submitTask()" data-dismiss="modal"
+                    class="btn btn-warning btn-block">Aktualizovať
+            </button>
+
           </div>
         </form>
 

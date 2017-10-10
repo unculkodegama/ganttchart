@@ -8,7 +8,7 @@ import { Task } from '../model/task';
 export class TaskService {
 
     private taskUrl: string = "http://localhost:3000/tasks";
-    private sortTaskUrl: string = "http://localhost:3000/tasks?_sort=parentId,id&_order=desc";
+    private sortTaskUrl: string = "http://localhost:3000/tasks?_sort=parentId,dateOfCreation&_order=asc";
 
     constructor(private http: Http) {}
 
