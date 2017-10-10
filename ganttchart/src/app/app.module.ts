@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {TaskComponentModule} from "./component/task.component";
+import {TaskComponentModule} from "./component/task.module";
 import {HttpModule, JsonpModule} from "@angular/http";
 
 import {EmitterService} from "./services/event.service";
 import {FormsModule} from "@angular/forms";
 import {AppComponent} from "./app.component";
+import {DateComponentModule} from "./component/date.module";
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {AppComponent} from "./app.component";
     HttpModule,
     FormsModule,
     JsonpModule,
-    TaskComponentModule
+    TaskComponentModule,
+    DateComponentModule
   ],
   providers: [EmitterService],
   bootstrap: [ AppComponent ]

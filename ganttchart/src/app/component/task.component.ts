@@ -1,46 +1,15 @@
-import {NgModule} from "@angular/core";
-import {JsonpModule, HttpModule} from "@angular/http";
-import {FormsModule} from "@angular/forms";
-import {BrowserModule} from "@angular/platform-browser";
-import {TaskBoxComponent} from "./task-box.component";
-import {TaskFormComponent} from "./task-form.component";
-import {TaskListComponent} from "./task-list.component";
-import {TaskIndexComponent} from "./task.index";
-import {TaskService} from "../services/task.service";
-import {TooltipModule} from "ngx-tooltip";
-import {MyDateRangePickerModule} from 'mydaterangepicker';
+import {Component} from "@angular/core";
 
-@NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    JsonpModule,
-    TooltipModule,
-    MyDateRangePickerModule
-  ],
+@Component({
+    selector: 'task-widget',
+    templateUrl: '../html/tasks.index.html',
+    styleUrls: [ '../css/task.index.css']
 
-  declarations: [
-    TaskBoxComponent,
-    TaskFormComponent,
-    TaskListComponent,
-    TaskIndexComponent,
-  ],
-
-  providers: [
-    TaskService
-  ],
-
-  bootstrap: [TaskBoxComponent, TaskFormComponent, TaskListComponent, TaskIndexComponent],
-
-  exports: [
-    TaskBoxComponent,
-    TaskFormComponent,
-    TaskListComponent,
-    TaskIndexComponent,
-  ]
 })
 
-export class TaskComponentModule {
+export class TaskIndexComponent {
 
+    private listId = 'COMMENT_COMPONENT_LIST';
+    private editId = 'COMMENT_COMPONENT_EDIT';
+    private childId = 'COMMENT_COMPONENT_CHILD';
 }
